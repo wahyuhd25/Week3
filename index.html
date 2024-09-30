@@ -28,9 +28,9 @@
     </section>
 
     <section class="hero" data-scroll-section>
-      <div class="container-left">
-        <div class="hero-background"></div>
-        <h1 class="hero-text">
+      <div class="container-left" data-scroll data-scroll-speed="1">
+    <div class="hero-background" data-scroll data-scroll-speed="2"></div>
+    <h1 class="hero-text" data-scroll data-scroll-speed="3.4">
           HI, I'M <span class="name-text">WAHJOEE.</span>
         </h1>
       </div>
@@ -47,32 +47,35 @@
       <h1 class="work-title">MY WORKS</h1>
       <div class="grid-wrapper">
         <div class="column">
-          <div>
-            <img src="./gambar/Flyer3.png" alt="Flyer 3" />
+          <div data-scroll data-scroll-speed="1">
+            <img src="./gambar/Company Profile Cover.png" alt="Flyer 3" />
           </div>
-          <div>
+          <div data-scroll data-scroll-speed="2">
+            <img src="./gambar/Flyer2.png" alt="Flyer 3" />
+          </div>
+          <div data-scroll data-scroll-speed="3">
             <img src="./gambar/Poster11.png" alt="Poster 11" />
           </div>
         </div>
         <div class="column">
-          <div>
+          <div data-scroll data-scroll-speed="1">
             <img src="./gambar/Poster2.png" alt="Poster 2" />
           </div>
-          <div>
+          <div data-scroll data-scroll-speed="2">
             <img src="./gambar/Poster3.png" alt="Poster 3" />
           </div>
-          <div>
+          <div data-scroll data-scroll-speed="3">
             <img src="./gambar/Poster5.png" alt="Poster 5" />
           </div>
         </div>
         <div class="column">
-          <div>
+          <div data-scroll data-scroll-speed="1">
             <img src="./gambar/Poster6.png" alt="Poster 6" />
           </div>
-          <div>
+          <div data-scroll data-scroll-speed="2">
             <img src="./gambar/Poster7.png" alt="Poster 7" />
           </div>
-          <div>
+          <div data-scroll data-scroll-speed="3">
             <img src="./gambar/Poster8.png" alt="Poster 8" />
           </div>
         </div>
@@ -81,9 +84,9 @@
 
     <section id="about-me" class="about-me" data-scroll-section>
       <h1 class="about-me-title">ABOUT ME</h1>
-      <h1 class="nama">Muhammad Wahyu Hidayat.</h1>
-      <h1 class="ngapain">- Graphic Design & Front End</h1>
-      <p class="isi">
+      <h1 class="nama" data-scroll data-scroll-speed="1">Muhammad Wahyu Hidayat.</h1>
+      <h1 class="ngapain" data-scroll data-scroll-speed="2">- Graphic Design & Front End</h1>
+      <p class="isi" data-scroll data-scroll-speed="3">
         Saya bisa desain grafis dikit, front end web lebih dikit, front end
         mobile lebih dikit lagi, maafkeun...Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -104,7 +107,7 @@
         const scroll = new LocomotiveScroll({
           el: document.querySelector("[data-scroll-container]"),
           smooth: true,
-          lerp: 0.1
+          lerp: 0.05
         });
 
         $('a.navbar-item').on('click', function (event) {
