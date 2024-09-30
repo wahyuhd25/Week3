@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D121221026_Week3</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-scroll-container>
+
+    <section class="navbar" data-scroll-section>
+      <ul class="navbar-links-list">
+        <li class="navbar-list-item">
+          <a href="#work" class="navbar-item">WORK</a>
+        </li>
+        <li class="navbar-list-item">
+          <a href="#about-me" class="navbar-item">ABOUT</a>
+        </li>
+        <li class="navbar-list-item">
+          <a href="#contact" class="navbar-item">CONTACT</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="hero" data-scroll-section>
+      <div class="container-left">
+        <div class="hero-background"></div>
+        <h1 class="hero-text">
+          HI, I'M <span class="name-text">WAHJOEE.</span>
+        </h1>
+      </div>
+      <div class="container-right">
+        <div class="hero-video">
+          <video autoplay loop muted>
+            <source src="./video/CYue-L2d.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work" data-scroll-section>
+      <h1 class="work-title">MY WORKS</h1>
+      <div class="grid-wrapper">
+        <div class="column">
+          <div>
+            <img src="./gambar/Flyer3.png" alt="Flyer 3" />
+          </div>
+          <div>
+            <img src="./gambar/Poster11.png" alt="Poster 11" />
+          </div>
+        </div>
+        <div class="column">
+          <div>
+            <img src="./gambar/Poster2.png" alt="Poster 2" />
+          </div>
+          <div>
+            <img src="./gambar/Poster3.png" alt="Poster 3" />
+          </div>
+          <div>
+            <img src="./gambar/Poster5.png" alt="Poster 5" />
+          </div>
+        </div>
+        <div class="column">
+          <div>
+            <img src="./gambar/Poster6.png" alt="Poster 6" />
+          </div>
+          <div>
+            <img src="./gambar/Poster7.png" alt="Poster 7" />
+          </div>
+          <div>
+            <img src="./gambar/Poster8.png" alt="Poster 8" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me" class="about-me" data-scroll-section>
+      <h1 class="about-me-title">ABOUT ME</h1>
+      <h1 class="nama">Muhammad Wahyu Hidayat.</h1>
+      <h1 class="ngapain">- Graphic Design & Front End</h1>
+      <p class="isi">
+        Saya bisa desain grafis dikit, front end web lebih dikit, front end
+        mobile lebih dikit lagi, maafkeun...Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <section id="contact" class="contact" data-scroll-section>
+      <h1>CONTACT</h1>
+      <p>Email: hehe@hehe.com</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+          lerp: 0.1
+        });
+
+        $('a.navbar-item').on('click', function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            const target = this.hash;
+            scroll.scrollTo(target, {
+              offset: -100
+            });
+          }
+        });
+
+        $(window).on('resize', function() {
+          scroll.update();
+        });
+      });
+    </script>
+  </body>
+</html>
