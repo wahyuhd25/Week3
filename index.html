@@ -47,36 +47,36 @@
       <h1 class="work-title">MY WORKS</h1>
       <div class="grid-wrapper">
         <div class="column">
-          <div data-scroll data-scroll-speed="1">
-            <img src="./gambar/Company Profile Cover.png" alt="Flyer 3" />
-          </div>
           <div data-scroll data-scroll-speed="2">
-            <img src="./gambar/Flyer2.png" alt="Flyer 3" />
+            <img src="./gambar/Company Profile Cover.webp" alt="Flyer 3" />
           </div>
           <div data-scroll data-scroll-speed="3">
-            <img src="./gambar/Poster11.png" alt="Poster 11" />
+            <img src="./gambar/Flyer2.webp" alt="Flyer 3" />
+          </div>
+          <div data-scroll data-scroll-speed="4">
+            <img src="./gambar/Poster11.webp" alt="Poster 11" />
           </div>
         </div>
         <div class="column">
-          <div data-scroll data-scroll-speed="1">
-            <img src="./gambar/Poster2.png" alt="Poster 2" />
-          </div>
           <div data-scroll data-scroll-speed="2">
-            <img src="./gambar/Poster3.png" alt="Poster 3" />
+            <img src="./gambar/Poster2.webp" alt="Poster 2" />
           </div>
           <div data-scroll data-scroll-speed="3">
-            <img src="./gambar/Poster5.png" alt="Poster 5" />
+            <img src="./gambar/Poster3.webp" alt="Poster 3" />
+          </div>
+          <div data-scroll data-scroll-speed="4">
+            <img src="./gambar/Poster5.webp" alt="Poster 5" />
           </div>
         </div>
         <div class="column">
-          <div data-scroll data-scroll-speed="1">
-            <img src="./gambar/Poster6.png" alt="Poster 6" />
-          </div>
           <div data-scroll data-scroll-speed="2">
-            <img src="./gambar/Poster7.png" alt="Poster 7" />
+            <img src="./gambar/Poster6.webp" alt="Poster 6" />
           </div>
           <div data-scroll data-scroll-speed="3">
-            <img src="./gambar/Poster8.png" alt="Poster 8" />
+            <img src="./gambar/Poster7.webp" alt="Poster 7" />
+          </div>
+          <div data-scroll data-scroll-speed="4">
+            <img src="./gambar/Poster8.webp" alt="Poster 8" />
           </div>
         </div>
       </div>
@@ -95,10 +95,13 @@
       </p>
     </section>
 
-    <section id="contact" class="contact" data-scroll-section>
-      <h1>CONTACT</h1>
-      <p>Email: hehe@hehe.com</p>
-    </section>
+<section class="contact">
+
+  <!-- <h2 class="contact-text">
+    Hubungi Jika Butuh Cuy
+  </h2> -->
+
+</section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
@@ -107,7 +110,7 @@
         const scroll = new LocomotiveScroll({
           el: document.querySelector("[data-scroll-container]"),
           smooth: true,
-          lerp: 0.05
+          lerp: 0.05,
         });
 
         $('a.navbar-item').on('click', function (event) {
